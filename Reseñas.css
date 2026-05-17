@@ -1,0 +1,562 @@
+body .menu-navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+nav ul {
+    margin-left: 50px;
+    /* Mueve todo el menú a la derecha */
+}
+
+nav {
+    text-align: right;
+}
+
+
+
+/*animacion y decoracion de los botones*/
+.card:hover img {
+    transform: scale(1.1);
+    /* Aumenta un 10% */
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    /* Aumenta toda la tarjeta */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    /* Sombra elegante */
+}
+
+.nav-link {
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #000000;
+    /* azul oscuro del botón Contacto */
+    color: #ffffffcc !important;
+    /* texto blanco */
+    transform: scale(1.1);
+    /* se amplía */
+}
+
+.nav-link:hover {
+    background-color: #502c2c;
+    color: #ffffff !important;
+    transform: scale(1.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+/*botones de menu*/
+.boton-animado {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #aa0000;
+    color: #fff;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 18px rgb(0, 0, 0);
+}
+/* animacion de cuando el mouse pasa por encima*/
+.boton-animado:hover {
+    transform: scale(1.08);
+    /* se amplía */
+    background-color: #5c0000;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+
+
+
+
+/* styles.css - diseño simple y profesional */
+
+:root {
+      background-image: url('img/fondo-contacto.png');
+
+    --card: hsl(0, 6%, 66%);
+    --accent: #5c0000;
+    --text: #000000;
+    --muted: #000000;
+    --radius: 12px;
+    --container: 1100px;
+    font-family: 'Inter', system-ui, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    font-size: 16px
+}
+
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 1rem
+}
+
+.site-header {
+    background: #fff;
+    box-shadow: 0 1px 8px rgba(16, 24, 40, .04);
+    position: sticky;
+    top: 0;
+    z-index: 50
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 1.2rem
+}
+
+.brand span {
+    color: var(--accent)
+}
+
+.tag {
+    margin: 0;
+    font-size: .85rem;
+    color: var(--muted)
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav a {
+    color: var(--text);
+    text-decoration: none
+}
+
+.nav .btn {
+    background: var(--accent);
+    color: #fff;
+    padding: .45rem .8rem;
+    border-radius: 8px;
+    text-decoration: none
+}
+
+.nav-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 1.2rem
+}
+
+
+/*titulo*/
+h1 a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/* IMAGEN del fondo de la pagina */
+.img-principal {
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("img/img-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CAPA OSCURA */
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* TITULO */
+.overlay h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+/* TEXTO */
+.overlay p {
+  font-size: 25px;
+}
+
+/*animacion del fondo*/
+.img-principal {
+  background-attachment: fixed;
+  animation: zoom 10s infinite alternate;
+}
+
+
+.overlay h1,
+.overlay p {
+  animation: aparecer 2s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Todos los hero y algunos botones */
+
+.hero {
+    padding: 3rem 0
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    margin: .2rem 0
+}
+
+.hero-text{
+  color: #e6e9ee;
+}
+
+.hero-text p {
+    color: var(--muted);
+    margin-bottom: 1rem
+}
+
+.btn {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 6px 18px rgb(255, 255, 255);
+    padding: .6rem .9rem;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block
+}
+
+.btn.large {
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem
+}
+
+.link {
+    margin-left: 1rem;
+    color: var(--accent);
+    text-decoration: none
+}
+
+
+.opcion-de-ofertas {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 9rem;
+    align-items: center;
+    margin-left: 600px;
+}
+
+
+/* sections */
+
+.section {
+    padding: 2.5rem 0
+}
+
+.section.light {
+    background: #fff;
+    border-radius: 16px;
+    margin: 1rem 0;
+    padding: 2.5rem
+}
+
+.section-title {
+    margin: 0 0 1rem;
+    font-size: 1.3rem
+}
+
+.img-principal {
+    background-attachment: fixed;
+    animation: 10s ease 0s infinite alternate none running zoom;
+}
+
+
+.img-principal {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Secciones */
+.section {
+  padding: 2.5rem 0;
+}
+
+.section.light {
+  background: #fff;
+  border-radius: 16px;
+  margin: 1rem 0;
+  padding: 2.5rem;
+  color: var(--text);
+}
+
+.section-title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+/* Tarjetas de reseñas */
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--card);
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  min-width: 220px;
+  color: var(--text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Formulario */
+.contact-form {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  color: var(--text);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: .5rem;
+  color: var(--muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: .6rem;
+  border-radius: 8px;
+  border: 1px solid #e6e9ee;
+  margin-bottom: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+}
+
+/* Botón animado */
+.boton-animado {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: var(--accent);
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 18px rgb(0, 0, 0);
+}
+
+.boton-animado:hover {
+  transform: scale(1.08);
+  background-color: #aa0000;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Footer */
+.site-footer {
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+
+
+
+
+
+
+
+/* Contenedor de reseñas */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Tarjeta de reseña */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Animación al pasar el mouse */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Encabezado de la reseña */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .8rem;
+}
+
+/* Nombre del usuario */
+.card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Estrellas */
+.card-header .estrellas {
+  font-size: 1.2rem;
+  color: #f5c518; /* dorado */
+}
+
+/* Texto de la reseña */
+.card-body {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+  align-self: flex-end;
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background: #aa0000;
+}
+
+/* Contador y promedio */
+#promedio, .contador {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+.leer-mas {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  margin-top: 6px;
+}
+
+.leer-mas:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+
+
+/* Texto con scroll interno */
+.scrollable {
+  max-height: 120px;   /* altura fija dentro del recuadro */
+  overflow-y: auto;    /* activa la barra vertical */
+  padding-right: 6px;  /* espacio para la barra */
+}

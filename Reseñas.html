@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Barbershop of Love</title>
+  <link rel="stylesheet" href="Reseñas.css">
+  <script src="Reseñas.js" defer></script>
+</head>
+<body>
+
+  <!-- Encabezado -->
+
+
+
+  <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+
+
+                   <a href="index.html"> <img src="img/logo.png" alt="Logo" style="height:70px;vertical-align:middle;margin-right:40px;"></a>
+
+
+
+                <h1>
+                    <i>
+                        <a href="index.html">The Barbershop of Love</a>
+                    </i>
+                </h1>
+
+                <p class="tag">Barberia — profesional</p>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="Reseñas.html" class="nav-link">Reseñas</a>
+                <a href="contacto.html" class="nav-link">contactos</a>
+                <a class="btn nav link" href="Reservas.html">
+                    Reserva Ahora
+                </a>
+            </nav>
+            <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+        </div>
+    </header>
+
+
+<section class="img-principal">
+
+  <div class="overlay">
+    <h1>Servicios de Barbería Profesional</h1>
+    <p>Más de 20 años perfeccionando el arte del corte masculino</p>
+  </div>
+
+</section>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Sección de reseñas -->
+  <section id="reseñas" class="section light">
+    <h2 class="section-title">⭐ Opiniones</h2>
+  <p id="promedio" style="font-weight:bold; color:#5c0000;">Promedio de puntuación: 0.0 ⭐</p>
+  <div class="cards" id="lista-reseñas">
+    <!-- Aquí se insertarán las reseñas dinámicamente -->
+  </div>
+    <div class="cards" id="lista-reseñas">
+      <div class="card">
+        <h3>Juan & María</h3>
+        <p>"Venimos juntos cada mes. Aquí no solo nos arreglan, también nos recuerdan que cuidarse es un acto de amor compartido."</p>
+      </div>
+      <div class="card">
+        <h3>Carlos</h3>
+        <p>"Me hicieron sentir especial. El ambiente romántico me relajó y hasta me inspiró a invitar a mi pareja a venir conmigo."</p>
+      </div>
+      <div class="card">
+        <h3>Ana</h3>
+        <p>"Un corte con detalles, música suave y frases de amor en las paredes. Es como recibir un mimo al corazón."</p>
+      </div>
+    </div>
+  </section>
+
+  
+
+<!-- Formulario de reseñas -->
+<section id="contacto" class="section light">
+  <h2 class="section-title">💬 Deja tu reseña</h2>
+  <div class="contact-grid">
+    <form class="contact-form" id="form-reseña">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="reseña">Tu reseña</label>
+      <textarea id="reseña" name="reseña" rows="4" required></textarea>
+
+      <label for="estrellas">Calificación (1-5)</label>
+      <select id="estrellas" name="estrellas" required>
+        <option value="1">⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+      </select>
+
+      <div class="form-actions">
+        <button type="submit" class="boton-animado">Enviar</button>
+      </div>
+    </form>
+    <div class="contact-info">
+      <p>📍 Santo Domingo Este, República Dominicana</p>
+      <p>📞 Tel: (809) 555-1234</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Barbería Amor al Estilo. Todos los derechos reservados.</p>
+  </footer>
+
+  
+
+
+
+
+
+
+
+
+</body>
+</html>
