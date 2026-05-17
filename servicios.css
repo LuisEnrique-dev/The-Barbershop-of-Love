@@ -1,0 +1,583 @@
+body .menu-navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+nav ul {
+    margin-left: 50px;
+    /* Mueve todo el menú a la derecha */
+}
+
+nav {
+    text-align: right;
+}
+
+/*titulo de la seccion de servicios*/
+.servicios h2 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: 36px;
+    color: #111;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.servicios {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 
+    Arial, sans-serif;
+
+}
+
+
+
+.card:hover img {
+    transform: scale(1.1);
+    /* Aumenta un 10% */
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    /* Aumenta toda la tarjeta */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    /* Sombra elegante */
+}
+
+.nav-link {
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #000000;
+    /* azul oscuro del botón Contacto */
+    color: #ffffffcc !important;
+    /* texto blanco */
+    transform: scale(1.1);
+    /* se amplía */
+}
+
+.nav-link:hover {
+    background-color: #502c2c;
+    color: #ffffff !important;
+    transform: scale(1.12);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+/*botones de menu*/
+.boton-animado {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #aa0000;
+    color: #fff;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 18px rgb(0, 0, 0);
+}
+/* animacion de cuando el mouse pasa por encima*/
+.boton-animado:hover {
+    transform: scale(1.08);
+    /* se amplía */
+    background-color: #5c0000;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.35);
+}
+
+
+
+
+
+/* styles.css - diseño simple y profesional */
+
+:root {
+    --bg: hsl(0, 0%, 0%);
+    --card: hsl(0, 6%, 66%);
+    --accent: #5c0000;
+    --text: #000000;
+    --muted: #6b7280;
+    --radius: 12px;
+    --container: 1100px;
+    font-family: 'Inter', system-ui, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    font-size: 16px
+}
+
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 1rem
+}
+
+.site-header {
+    background: #fff;
+    box-shadow: 0 1px 8px rgba(16, 24, 40, .04);
+    position: sticky;
+    top: 0;
+    z-index: 50
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 1.2rem
+}
+
+.brand span {
+    color: var(--accent)
+}
+
+.tag {
+    margin: 0;
+    font-size: .85rem;
+    color: var(--muted)
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav a {
+    color: var(--text);
+    text-decoration: none
+}
+
+.nav .btn {
+    background: var(--accent);
+    color: #fff;
+    padding: .45rem .8rem;
+    border-radius: 8px;
+    text-decoration: none
+}
+
+.nav-toggle {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 1.2rem
+}
+
+
+/*titulo*/
+h1 a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-style: italic;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/* IMAGEN del fondo de la pagina */
+.img-principal {
+  width: 100%;
+  height: 100vh;
+
+  background-image: url("img/img-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CAPA OSCURA */
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* TITULO */
+.overlay h1 {
+  font-size: 60px;
+  margin: 0;
+}
+
+/* TEXTO */
+.overlay p {
+  font-size: 25px;
+}
+
+/*animacion del fondo*/
+.img-principal {
+  background-attachment: fixed;
+  animation: zoom 10s infinite alternate;
+}
+
+
+.overlay h1,
+.overlay p {
+  animation: aparecer 2s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Todos los hero y algunos botones */
+
+.hero {
+    padding: 3rem 0
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    margin: .2rem 0
+}
+
+.hero-text{
+  color: #e6e9ee;
+}
+
+.hero-text p {
+    color: var(--muted);
+    margin-bottom: 1rem
+}
+
+.btn {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 6px 18px rgb(255, 255, 255);
+    padding: .6rem .9rem;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block
+}
+
+.btn.large {
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem
+}
+
+.link {
+    margin-left: 1rem;
+    color: var(--accent);
+    text-decoration: none
+}
+
+
+.opcion-de-ofertas {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 9rem;
+    align-items: center;
+    margin-left: 600px;
+}
+
+
+/* sections */
+
+.section {
+    padding: 2.5rem 0
+}
+
+.section.light {
+    background: #fff;
+    border-radius: 16px;
+    margin: 1rem 0;
+    padding: 2.5rem
+}
+
+.section-title {
+    margin: 0 0 1rem;
+    font-size: 1.3rem
+}
+
+.img-principal {
+    background-attachment: fixed;
+    animation: 10s ease 0s infinite alternate none running zoom;
+}
+
+
+.img-principal {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/fondo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BODY MEJORADO */
+body{
+    background: linear-gradient(180deg,#ffffff,#f5f5f5);
+    color:#222;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* RESET */
+*{
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* SECCION SERVICIOS */
+.servicios{
+    text-align:center;
+    padding:60px 40px;
+      background-image: url('img/fondo-contacto.png');
+
+}
+
+/* TITULO */
+.servicios h1{
+    font-size:42px;
+    margin-bottom:20px;
+    color:#111;
+}
+
+.servicios span{
+    color:#e10600; /* rojo principal */
+}
+
+/* HERO ROJO */
+.hero{
+    background:#5c0000;
+    color:white;
+    min-height:100vh;
+}
+
+
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* BOTON NAV */
+.btn-nav{
+    background:#f3e3d3;
+    color:#e10600;
+    padding:10px 20px;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* TEXTO CENTRAL */
+.hero-texto{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+    padding-top:80px;
+}
+
+.hero-texto h1{
+    font-size:80px;
+    line-height:90px;
+    margin-bottom:30px;
+}
+
+.hero-texto p{
+    font-size:18px;
+    color:#f0dede;
+    margin-bottom:40px;
+}
+
+/* BOTON GRANDE */
+.btn-hero{
+    background:#f3e3d3;
+    color:#7b0015;
+    padding:15px 35px;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/* BARRA FILTROS */
+.filtros{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.filtros button{
+    padding:10px 20px;
+    border-radius:25px;
+    border:none;
+    background:#eee;
+    color:#333;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.filtros button:hover{
+    background:#e10600;
+    color:white;
+}
+
+.filtros .activo{
+    background:#e10600;
+    color:white;
+}
+
+/* CONTENEDOR CARDS */
+.contenedor-cards{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:25px;
+    padding:50px;
+}
+
+/* CARD BLANCA CON TOQUE ROJO */
+.card{
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    text-align:left;
+    transition:0.3s;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    border-bottom:4px solid #e10600;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* IMAGEN */
+.card img{
+    width:100%;
+    border-radius:12px;
+    margin-bottom:10px;
+    object-fit: cover;
+}
+
+/* TEXTOS */
+.card h3{
+    margin:10px 0;
+    color:#111;
+    min-height: 60px;
+}
+
+.card p{
+    font-size:14px;
+    color:#666;
+    margin-bottom:15px;
+    min-height: 40px;
+}
+
+/* PRECIO Y TIEMPO */
+.info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+    font-size:14px;
+    object-fit: cover;
+}
+
+
+
+.card{
+    display:flex;
+    flex-direction:column;
+}
+
+.card h3{
+    min-height:60px;
+}
+
+
+
+
+
+.precio{
+    background:#ffe5e5;
+    color:#e10600;
+    padding:6px 12px;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.tiempo{
+    color:#777;
+}
+
+/* BOTON RESERVAR ROJO */
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#e10600;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ffffff;
+}

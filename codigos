@@ -1,0 +1,24 @@
+
+                        <div class="hero-cta">
+                            <a class="btn large boton-animado" href="contactos.html">Reservar Ahora</a>
+                        </div>
+                        <br>
+                        <a class="btn large boton-animado" href="#abajo">
+                            <b><i>Click Aqui Para Mas Informacion</i></b>
+                        </a>
+
+                </div>
+
+
+
+
+                 <p style="height: 500px;"></p>
+        <!-- Solo para simular espacio -->
+
+
+
+
+          <div class="corner-heart top-left">💔</div>
+  <div class="corner-heart top-right">💔</div>
+  <div class="corner-heart bottom-left">💔</div>
+  <div class="corner-heart bottom-right">💔</div>
