@@ -437,7 +437,7 @@ h1 a {
     --blanco: #ffffff;
     --gris-claro: #f8f9fa;
     --acento-rojo: #e63946;
-    --texto-oscuro: #1d3557;
+    --texto-oscuro: #ffffff;
     --borde: #dee2e6;
 }
 
@@ -446,12 +446,12 @@ h1 a {
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
-    background-color: var(--gris-claro); /* Fondo suave para que resalte la tarjeta blanca */
+    background-color:#ffffff que resalte la tarjeta blanca */
     min-height: 100vh;
 }
 
 .contacto-card {
-    background: var(--blanco);
+    background-color: #5c0000;
     width: 100%;
     max-width: 450px;
     padding: 40px;
