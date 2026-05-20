@@ -43,7 +43,7 @@ nav {
 }
 
 .nav-link:hover {
-    background-color: #000000;
+    background-color: #ffffff;
     /* azul oscuro del botón Contacto */
     color: #ffffffcc !important;
     /* texto blanco */
@@ -232,13 +232,14 @@ body {
     background: var(--bg);
     color: var(--text);
     line-height: 1.5;
-    font-size: 16px
+    font-size: 16px;
+    background-color: #ffffff;
 }
 
 .container {
     max-width: var(--container);
     margin: 0 auto;
-    padding: 1rem
+    padding: 1rem;
 }
 
 .site-header {
