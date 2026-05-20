@@ -240,6 +240,7 @@ body {
     max-width: var(--container);
     margin: 0 auto;
     padding: 1rem;
+    background-color: #ffffff;
 }
 
 .site-header {
