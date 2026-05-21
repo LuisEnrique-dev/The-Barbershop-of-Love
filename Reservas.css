@@ -455,6 +455,31 @@ body {
 .form-group select option { background: #1a1a1a; }
 input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1) sepia(1) saturate(5) hue-rotate(310deg); cursor: pointer; }
 
+
+
+
+
+#barbero {
+    width: 100%;
+    padding: 3px;
+    background: #0a0a0a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    outline: none;
+}
+
+#barbero option {
+    background: #0a0a0a;
+    color: white;
+}
+
+
+
+
+
+
 .reserve-btn {
   background: var(--red);
   color: #fff;

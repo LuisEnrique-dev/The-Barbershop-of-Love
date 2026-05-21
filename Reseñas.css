@@ -500,6 +500,46 @@ h1 a {
   color: #f5c518; /* dorado */
 }
 
+/* Contenedor del grupo de calificación */
+.rating-group {
+    margin-bottom: 20px;
+}
+.rating-group label i {
+    color: #333;
+}
+
+/* Contenedor de las estrellas */
+.stars {
+    display: flex;
+    flex-direction: row-reverse; /* Voltea el orden visualmente */
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+/* Ocultar los radio buttons originales */
+.stars input[type="radio"] {
+    display: none;
+}
+
+/* Estilo por defecto de las estrellas (apagadas) */
+.stars label {
+    font-size: 26px;
+    color: #ccc; /* Gris claro */
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* Cuando pasas el mouse por encima o cuando la estrella está seleccionada */
+.stars input[type="radio"]:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #ffca28; /* Dorado brillante */
+}
+
+
+
+
 /* Texto de la reseña */
 .card-body {
   font-size: 0.95rem;

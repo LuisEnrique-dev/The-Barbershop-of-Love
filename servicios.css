@@ -308,6 +308,16 @@ h1 a {
 }
 
 
+.nav-link-servicios {
+    text-decoration: none;
+    color: #000;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
 /* sections */
 
 .section {
@@ -574,12 +584,12 @@ button{
     border:none;
     border-radius:10px;
     background:#e10600;
-    color:white;
+    color:rgb(255, 255, 255);
     font-weight:bold;
     cursor:pointer;
     transition:0.3s;
 }
 
 button:hover{
-    background:#ffffff;
+    background:#960101;
 }
