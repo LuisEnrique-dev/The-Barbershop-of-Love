@@ -1,0 +1,499 @@
+/* Variables principales */
+:root {
+  --bg: hsl(0, 0%, 0%);
+  --card: hsl(0, 6%, 66%);
+  --accent: #5c0000;
+  --text: #000000;
+  --muted: #6b7280;
+  --radius: 12px;
+  --container: 1100px;
+  font-family: 'Inter', system-ui, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Encabezado */
+.site-header {
+  background: #fff;
+  box-shadow: 0 1px 8px rgba(16, 24, 40, .1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--text);
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+.tag {
+  margin: 0;
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+/* Navegación */
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--accent);
+  color: #fff !important;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transform: scale(1.1);
+}
+
+/* Botón principal */
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #aa0000;
+  transform: scale(1.05);
+}
+
+/* Imagen principal con overlay */
+.img-principal {
+  width: 100%;
+  height: 100vh;
+  background-image: url("img/fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 60px;
+  margin: 0;
+  animation: aparecer 2s ease;
+}
+
+.overlay p {
+  font-size: 25px;
+  animation: aparecer 2s ease;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Secciones */
+.section {
+  padding: 2.5rem 0;
+}
+
+.section.light {
+  background: #fff;
+  border-radius: 16px;
+  margin: 1rem 0;
+  padding: 2.5rem;
+  color: var(--text);
+}
+
+.section-title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+/* Tarjetas de reseñas */
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--card);
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  min-width: 220px;
+  color: var(--text);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+/* --- ESTILOS COMPATIBLES CON LA BARBERÍA --- */
+
+/* Contenedor de la sección completa */
+.section-formulario {
+    background-color: #121212; /* Fondo oscuro premium como las imágenes */
+    padding: 60px 20px;
+    font-family: 'Playfair Display', 'Segoe UI', serif; /* Tipografía elegante */
+    color: #ffffff;
+}
+
+.formulario-container {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Título principal */
+.section-formulario .section-title {
+    color: #6a040f; /* Color vino/rojo de la barbería */
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Rejilla y tarjeta del formulario */
+.section-formulario .contact-grid {
+    background: #1c1c1c; /* Gris muy oscuro satinado */
+    border: 1px solid #2a2a2a; /* Borde sutil */
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Grupos de entrada (Labels e Inputs) */
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    color: #cccccc;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Cajas de texto y Textareas */
+.input-group input[type="text"],
+.input-group textarea {
+    background-color: #262626;
+    border: 1px solid #3d3d3d;
+    border-radius: 4px;
+    padding: 12px 15px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input-group input[type="text"]:focus,
+.input-group textarea:focus {
+    border-color: #6a040f; /* Brillo vino al seleccionar */
+    outline: none;
+    background-color: #2d2d2d;
+}
+
+/* --- SISTEMA MAGICO DE ESTRELLAS DORADAS --- */
+.rating-group {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.rating-label {
+    color: #cccccc;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse; /* Permite el efecto visual correcto de selección */
+    justify-content: flex-end;
+}
+
+.stars input[type="radio"] {
+    display: none; /* Escondemos los círculos feos del sistema */
+}
+
+.stars label {
+    font-size: 1.8rem; /* Estrellas más grandes y legibles */
+    color: #444444; /* Color gris apagado cuando no están marcadas */
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0 4px;
+}
+
+/* Efecto Hover y Selección en cadena (ilumina desde la que tocas hacia atrás) */
+.stars label:hover,
+.stars label:hover ~ label,
+.stars input[type="radio"]:checked ~ label {
+    color: #ffb703; /* Dorado brillante de barbería clásica */
+}
+
+/* --- BOTÓN DE ENVIAR ESTILO BARBERÍA --- */
+.form-actions {
+    margin-top: 25px;
+}
+
+.boton-animado {
+    background-color: #6a040f; /* Color rojo vino idéntico a tu botón "Reserva Ahora" */
+    color: #a21818;
+    border: none;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(106, 4, 15, 0.3);
+    width: 100%; /* Se adapta elegantemente al ancho */
+}
+
+.boton-animado:hover {
+    background-color: #900c3f; /* Variante un poco más viva al pasar el mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(144, 12, 63, 0.4);
+}
+
+/* Datos de contacto inferiores */
+.contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #2a2a2a;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-info p {
+    color: #aaaaaa;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.contact-info i {
+    color: #6a040f; /* Iconos color vino */
+    margin-right: 8px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+    .section-formulario .contact-grid {
+        padding: 20px;
+    }
+    .rating-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+} 
+
+
+/* Contenedor de reseñas */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Tarjeta de reseña */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Animación al pasar el mouse */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Encabezado de la reseña */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .8rem;
+}
+
+/* Nombre del usuario */
+.card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+/* Estrellas */
+.card-header .estrellas {
+  font-size: 1.2rem;
+  color: #f5c518; /* dorado */
+}
+
+/* Texto de la reseña */
+.card-body {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+  align-self: flex-end;
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background: #aa0000;
+}
+
+/* Contador y promedio */
+#promedio, .contador {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+
+
+
+
+.leer-mas {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  margin-top: 6px;
+}
+
+.leer-mas:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+
+
+/* Texto con scroll interno */
+.scrollable {
+  max-height: 120px;   /* altura fija dentro del recuadro */
+  overflow-y: auto;    /* activa la barra vertical */
+  padding-right: 6px;  /* espacio para la barra */
+}
+
+/* Contenedor del grupo de calificación */
+.rating-group {
+    margin-bottom: 20px;
+}
+.rating-group label i {
+    color: #333;
+}
+
+/* Contenedor de las estrellas */
+.stars {
+    display: flex;
+    flex-direction: row-reverse; /* Voltea el orden visualmente */
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+/* Ocultar los radio buttons originales */
+.stars input[type="radio"] {
+    display: none;
+}
+
+/* Estilo por defecto de las estrellas (apagadas) */
+.stars label {
+    font-size: 26px;
+    color: #ccc; /* Gris claro */
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+/* Cuando pasas el mouse por encima o cuando la estrella está seleccionada */
+.stars input[type="radio"]:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #ffca28; /* Dorado brillante */
+}

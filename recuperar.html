@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar Contraseña - The Barbershop of Love</title>
+  <link rel="stylesheet" href="recuperar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="login-body">
+
+  <div class="login-card">
+    <h2><i class="fa-solid fa-key"></i> Restablecer</h2>
+    <p>Introduce tu usuario, tu frase secreta de seguridad y tu nueva contraseña.</p>
+    
+    <form action="procesar_recuperacion.php" method="POST">
+      
+      <div class="input-box">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" name="usuario" placeholder="Tu Usuario" required>
+      </div>
+
+      <div class="input-box">
+        <i class="fa-solid fa-shield-heart"></i>
+        <input type="password" name="clave_auxilio" placeholder="Tu Frase Secreta" required>
+      </div>
+
+      <div class="input-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" name="nueva_password" placeholder="Nueva Contraseña" required>
+      </div>
+
+      <button type="submit" class="boton-animado">Actualizar Contraseña</button>
+      
+      <div class="login-links">
+        <a href="login.html" class="link-olvido"><i class="fa-solid fa-arrow-left"></i> Volver al Login</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
