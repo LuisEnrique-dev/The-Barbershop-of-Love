@@ -555,6 +555,7 @@ body{
 .card{
     display:flex;
     flex-direction:column;
+    
 }
 
 .card h3{
