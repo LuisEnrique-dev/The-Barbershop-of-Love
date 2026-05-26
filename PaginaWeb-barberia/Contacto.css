@@ -551,16 +551,3 @@ h1 a {
     transform: scale(1.2);
 }   
 
-footer{
-    width: 100%;
-    padding: 15px;
-    background: #3b0000;
-    
-    text-align: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: white;
-}

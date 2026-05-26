@@ -1,29 +1,32 @@
-/* --- ESTILOS ESPECÍFICOS COMPARTIDOS PARA RECUPERAR --- */
+/* --- ESTILOS PARA EL SISTEMA DE USUARIOS (BARBERÍA) --- */
 
+/* Cuerpo de la página de Login/Registro */
 .login-body {
-    background-color: #121212;
+    background-color: #121212; /* Fondo oscuro premium */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    font-family: 'Playfair Display', 'Segoe UI', serif;
+    font-family: 'Playfair Display', 'Segoe UI', serif; /* Tipografía elegante */
     color: #ffffff;
 }
 
+/* Tarjeta contenedora flotante */
 .login-card {
-    background: #1c1c1c;
-    border: 1px solid #2a2a2a;
+    background: #1c1c1c; /* Gris oscuro satinado */
+    border: 1px solid #2a2a2a; /* Borde fino sutil */
     padding: 40px;
     width: 100%;
     max-width: 400px;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Sombra profunda */
     box-sizing: border-box;
 }
 
+/* Título de la tarjeta (Iniciar Sesión / Registrarse) */
 .login-card h2 {
-    color: #6a040f;
+    color: #6a040f; /* Color vino de la barbería */
     text-align: center;
     margin-top: 0;
     margin-bottom: 10px;
@@ -31,33 +34,36 @@
     font-weight: bold;
 }
 
+/* Subtítulos o textos descriptivos cortos */
 .login-card p {
     color: #aaaaaa;
     font-size: 0.85rem;
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Segoe UI', sans-serif;
-    line-height: 1.4;
 }
 
+/* Cajas contenedoras de inputs con iconos */
 .input-box {
     position: relative;
     margin-bottom: 22px;
 }
 
+/* Iconos de Font Awesome integrados dentro del input */
 .input-box i {
     position: absolute;
     left: 15px;
     top: 50%;
     transform: translateY(-50%);
-    color: #6a040f;
+    color: #6a040f; /* Iconos color vino */
     font-size: 1.1rem;
     transition: color 0.3s ease;
 }
 
+/* Inputs de Texto y Contraseña */
 .input-box input {
     width: 100%;
-    padding: 14px 15px 14px 45px;
+    padding: 14px 15px 14px 45px; /* Más espacio a la izquierda para no pisar el icono */
     background: #262626;
     border: 1px solid #3d3d3d;
     color: #ffffff;
@@ -68,20 +74,21 @@
     transition: all 0.3s ease;
 }
 
+/* Efecto al hacer clic o escribir en el input */
 .input-box input:focus {
-    border-color: #6a040f;
+    border-color: #6a040f; /* Brillo color vino */
     outline: none;
     background: #2d2d2d;
 }
 
-/* Cambio de color de icono automático */
+/* Cambia el color del icono cuando el usuario hace foco en el input */
 .input-box input:focus ~ i {
-    color: #900c3f;
+    color: #900c3f; /* El icono se vuelve un rojo más vivo */
 }
 
-/* Botón Vino con efectos de presión */
+/* --- BOTÓN ANIMADO ESTILO BARBERÍA (Añadido) --- */
 .login-card .boton-animado {
-    background-color: #6a040f;
+    background-color: #6a040f; /* Color vino idéntico a tus otros botones */
     color: #ffffff;
     border: none;
     padding: 14px 20px;
@@ -99,8 +106,8 @@
 }
 
 .login-card .boton-animado:hover {
-    background-color: #900c3f;
-    transform: translateY(-2px);
+    background-color: #900c3f; /* Rojo más encendido al pasar el mouse */
+    transform: translateY(-2px); /* Pequeño salto hacia arriba */
     box-shadow: 0 6px 20px rgba(144, 12, 63, 0.5);
 }
 
@@ -108,19 +115,36 @@
     transform: translateY(0);
 }
 
+/* --- ENLACES INFERIORES --- */
 .login-links {
     text-align: center;
     margin-top: 25px;
     font-family: 'Segoe UI', sans-serif;
 }
 
+/* Enlace: ¿Olvidaste tu contraseña? */
 .login-links .link-olvido {
     color: #aaaaaa;
     text-decoration: none;
     font-size: 0.85rem;
+    margin-right: 15px;
     transition: color 0.3s ease;
 }
 
 .login-links .link-olvido:hover {
-    color: #6a040f; /* Cambia a vino sutil al querer regresar */
+    color: #ffffff; /* Se ilumina en blanco al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* Enlace: Crear una cuenta / Volver */
+.login-links .link-registro {
+    color: #6a040f;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-links .link-registro:hover {
+    color: #900c3f; /* Rojo vivo */
 }

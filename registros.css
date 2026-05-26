@@ -1,4 +1,4 @@
-/* --- ESTILOS ESPECÍFICOS COMPARTIDOS PARA RECUPERAR --- */
+
 
 .login-body {
     background-color: #121212;
@@ -23,7 +23,7 @@
 }
 
 .login-card h2 {
-    color: #6a040f;
+    color: #6a040f; /* Tono vino de la marca */
     text-align: center;
     margin-top: 0;
     margin-bottom: 10px;
@@ -74,12 +74,12 @@
     background: #2d2d2d;
 }
 
-/* Cambio de color de icono automático */
+/* Efecto de enfoque en el icono */
 .input-box input:focus ~ i {
     color: #900c3f;
 }
 
-/* Botón Vino con efectos de presión */
+/* Botón animado con sombras de profundidad */
 .login-card .boton-animado {
     background-color: #6a040f;
     color: #ffffff;
@@ -122,5 +122,12 @@
 }
 
 .login-links .link-olvido:hover {
-    color: #6a040f; /* Cambia a vino sutil al querer regresar */
+    color: #6a040f;
 }
+
+
+body {
+    background-image: url(img/fondo-contacto.png);
+}
+
+

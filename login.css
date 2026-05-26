@@ -148,3 +148,38 @@
 .login-links .link-registro:hover {
     color: #900c3f; /* Rojo vivo */
 }
+
+/*fondo del login*/
+body {
+    background-image: url(img/fondo-contacto.png);
+}
+
+/*flecha de inicio*/
+
+.volver{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    
+    width: 45px;
+    height: 45px;
+    
+    background: rgb(255, 0, 0);
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 22px;
+
+    transition: 0.3s;
+}
+
+.volver:hover{
+    background: #c00000;
+    color: white;
+    transform: scale(1.1);
+}

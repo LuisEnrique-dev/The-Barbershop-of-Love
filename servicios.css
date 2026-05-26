@@ -505,7 +505,7 @@ body{
 
 /* CARD BLANCA CON TOQUE ROJO */
 .card{
-    background:white;
+    background:#1a1a1a;
     padding:15px;
     border-radius:15px;
     text-align:left;
@@ -530,13 +530,13 @@ body{
 /* TEXTOS */
 .card h3{
     margin:10px 0;
-    color:#111;
+    color:#ffffff;
     min-height: 60px;
 }
 
 .card p{
     font-size:14px;
-    color:#666;
+    color:#d6d0d0;
     margin-bottom:15px;
     min-height: 40px;
 }
@@ -567,7 +567,7 @@ body{
 
 
 .precio{
-    background:#ffe5e5;
+    background:#1a1a1a;
     color:#e10600;
     padding:6px 12px;
     border-radius:8px;
@@ -593,4 +593,18 @@ button{
 
 button:hover{
     background:#960101;
+}
+
+footer{
+    width: 100%;
+    padding: 15px;
+    background: #5c0000;
+    
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
 }

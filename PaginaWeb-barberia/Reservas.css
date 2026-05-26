@@ -534,18 +534,3 @@ input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1) sepia(
   .ticket-header { flex-direction: column; gap: 0.3rem; text-align: center; }
   .corner-heart { font-size: 1.6rem; }
 }
-
-
-footer{
-    width: 100%;
-    padding: 15px;
-    background: rgba(0,0,0,0.8);
-    
-    text-align: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: white;
-}
