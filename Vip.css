@@ -435,7 +435,7 @@ nav-link {
 
 /* CARD BLANCA CON TOQUE ROJO */
 .card{
-    background:white;
+    background:#1a1a1a;
     padding:15px;
     border-radius:15px;
     text-align:left;
@@ -460,13 +460,13 @@ nav-link {
 /* TEXTOS */
 .card h3{
     margin:10px 0;
-    color:#111;
+    color:#ffffff;
     min-height: 60px;
 }
 
 .card p{
     font-size:14px;
-    color:#666;
+    color:#c0c0c0;
     margin-bottom:15px;
     min-height: 40px;
 }
@@ -487,7 +487,7 @@ display: flex;
   flex-direction: column;
   justify-content: space-between; /* <--- Fuerza a que los elementos se distribuyan uniformemente */
   height: 100%; /* O un alto fijo, por ejemplo: 450px */
-  background-color: #fff;
+      background:#1a1a1a;
   border-radius: 12px;
   padding: 20px;
   box-sizing: border-box

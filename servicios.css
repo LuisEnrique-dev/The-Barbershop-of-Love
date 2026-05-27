@@ -465,6 +465,13 @@ body{
     cursor:pointer;
 }
 
+
+.btn-hero i {
+    color: #000;
+    text-decoration: none;
+}
+
+
 /* BARRA FILTROS */
 .filtros{
     display:flex;
@@ -503,7 +510,7 @@ body{
     padding:50px;
 }
 
-/* CARD BLANCA CON TOQUE ROJO */
+/* CARD NEGRA CON TOQUE ROJO */
 .card{
     background:#1a1a1a;
     padding:15px;
