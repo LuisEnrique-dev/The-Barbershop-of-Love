@@ -131,3 +131,57 @@ body {
 }
 
 
+/* ====================== */
+/* RESPONSIVE LOGIN */
+/* ====================== */
+
+@media (max-width:768px){
+
+    .login-card{
+        width:90%;
+        padding:30px;
+    }
+
+    .login-card h2{
+        font-size:1.6rem;
+    }
+
+    .login-card p{
+        font-size:0.8rem;
+    }
+}
+
+
+@media (max-width:480px){
+
+    .login-card{
+        width:100%;
+        padding:25px 20px;
+        border-radius:15px;
+    }
+
+    .login-card h2{
+        font-size:1.4rem;
+    }
+
+    .input-box input{
+        padding:12px 12px 12px 40px;
+        font-size:0.9rem;
+    }
+
+    .input-box i{
+        left:12px;
+        font-size:0.9rem;
+    }
+
+    .login-card .boton-animado{
+        padding:12px;
+        font-size:0.9rem;
+    }
+
+    .login-links{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+}

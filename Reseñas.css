@@ -870,3 +870,132 @@ footer{
 
     color: white;
 }
+
+
+/* ============ RESPONSIVE PARA RESEÑAS ============ */
+
+/* Evita scroll horizontal */
+body{
+    overflow-x:hidden;
+}
+
+/* Todas las imágenes adaptables */
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Corrige márgenes enormes */
+.opcion-de-ofertas{
+    margin-left:0;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+/* Contenedor */
+.container{
+    width:90%;
+    margin:auto;
+}
+
+/* Hero principal */
+.overlay h1{
+    font-size:clamp(30px,6vw,60px);
+}
+
+.overlay p{
+    font-size:clamp(16px,3vw,25px);
+}
+
+/* Tarjetas de reseñas */
+.cards{
+    display:grid !important;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.card{
+    width:100%;
+    min-width:unset;
+}
+
+/* Formulario */
+.contact-grid{
+    width:100%;
+}
+
+/* Tablets */
+@media(max-width:992px){
+
+    .header-inner{
+        flex-wrap:wrap;
+    }
+
+    .brand{
+        width:100%;
+        text-align:center;
+    }
+
+}
+
+/* Celulares */
+@media(max-width:768px){
+
+    .nav{
+        display:none;
+    }
+
+    .nav.open{
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        top:90px;
+        right:10px;
+        width:90%;
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        z-index:1000;
+    }
+
+    .nav-toggle{
+        display:block;
+    }
+
+    .img-principal{
+        height:70vh;
+        background-attachment:scroll;
+    }
+
+    .section-formulario .contact-grid{
+        padding:20px;
+    }
+
+    .rating-group{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .contact-info{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+/* Pantallas pequeñas */
+@media(max-width:480px){
+
+    .overlay h1{
+        font-size:28px;
+    }
+
+    .overlay p{
+        font-size:15px;
+    }
+
+    button{
+        width:100%;
+    }
+
+}

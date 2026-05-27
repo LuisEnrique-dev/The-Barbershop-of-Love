@@ -973,3 +973,146 @@ nav-link {
   margin-bottom: 20px;
 }
 
+.separacion{
+    margin-top:100px;
+}
+
+
+
+
+
+/* ================= RESPONSIVE GENERAL ================= */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Evita desbordamientos */
+body{
+    overflow-x:hidden;
+}
+
+/* Tarjeta grande inferior */
+.card{
+    width:100%;
+    max-width:1000px;
+}
+
+/* Elimina márgenes enormes */
+.opcion-de-ofertas{
+    margin-left:0;
+}
+
+.img-secundaria{
+    margin-left:0;
+}
+
+/* Hero principal */
+
+.overlay h1{
+    font-size:clamp(30px,6vw,60px);
+}
+
+.overlay p{
+    font-size:clamp(16px,3vw,25px);
+}
+
+/* Tablets */
+
+@media(max-width:992px){
+
+    .header-inner{
+        flex-wrap:wrap;
+    }
+
+    .brand{
+        text-align:center;
+        width:100%;
+    }
+
+    .card-oferta,
+    .card-barbero{
+        width:100%;
+    }
+
+}
+
+/* Celulares */
+
+@media(max-width:768px){
+
+    .nav{
+        display:none;
+    }
+
+    .nav.open{
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        top:90px;
+        right:10px;
+        width:90%;
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        z-index:1000;
+    }
+
+    .nav-toggle{
+        display:block;
+    }
+
+    .overlay{
+        padding:20px;
+        text-align:center;
+    }
+
+    .img-principal{
+        height:70vh;
+        background-attachment:scroll;
+    }
+
+    .titulo-ofertas h2,
+    .titulo-barbero h2{
+        font-size:35px;
+    }
+
+    .info-oferta h3,
+    .info-barbero h3{
+        font-size:22px;
+    }
+
+    .extra{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .cards{
+        flex-direction:column;
+    }
+
+    .container{
+        padding:15px;
+    }
+
+}
+
+/* Pantallas pequeñas */
+
+@media(max-width:480px){
+
+    .overlay h1{
+        font-size:28px;
+    }
+
+    .overlay p{
+        font-size:15px;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+}

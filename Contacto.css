@@ -436,8 +436,9 @@ h1 a {
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
-    background-color:#ffffff /*que resalte la tarjeta blanca */
-    min-height 100vh;}
+    background-color:#ffffff,
+    min-height 100vh;
+}
 
 
 .contacto-card {
@@ -563,4 +564,118 @@ footer{
     align-items: center;
 
     color: white;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+body{
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Menú móvil */
+
+@media(max-width:768px){
+
+    .header-inner{
+        flex-wrap:wrap;
+    }
+
+    .brand{
+        width:100%;
+        text-align:center;
+    }
+
+    .nav{
+        display:none;
+    }
+
+    .nav.open{
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        top:90px;
+        right:10px;
+        width:90%;
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        z-index:1000;
+    }
+
+    .nav-toggle{
+        display:block;
+    }
+
+    /* Hero */
+
+    .img-principal{
+        height:70vh;
+        background-attachment:scroll;
+    }
+
+    .overlay h1{
+        font-size:30px;
+    }
+
+    .overlay p{
+        font-size:16px;
+    }
+
+    /* Sección reserva */
+
+    .reserva-section{
+        flex-direction:column;
+        padding:20px;
+        gap:20px;
+    }
+
+    .info-left{
+        width:100%;
+        text-align:center;
+    }
+
+    .info-left h1{
+        font-size:35px;
+    }
+
+    .info-left h2{
+        font-size:28px;
+    }
+
+    .card-info{
+        width:100%;
+    }
+
+    /* Formulario */
+
+    .contacto-card{
+        width:100%;
+        padding:20px;
+    }
+
+    .contact-info{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+/* Celulares pequeños */
+
+@media(max-width:480px){
+
+    .overlay h1{
+        font-size:26px;
+    }
+
+    .overlay p{
+        font-size:14px;
+    }
+
 }

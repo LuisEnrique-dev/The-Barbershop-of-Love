@@ -1,7 +1,7 @@
 /* --- ESTILOS ESPECÍFICOS COMPARTIDOS PARA RECUPERAR --- */
 
 .login-body {
-    background-color: #121212;
+    background-image: url(img/fondo-contacto.png);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,4 +123,111 @@
 
 .login-links .link-olvido:hover {
     color: #6a040f; /* Cambia a vino sutil al querer regresar */
+}
+
+
+/* ======================= */
+/* RESPONSIVE LOGIN */
+/* ======================= */
+
+/* Tablets */
+@media (max-width:768px){
+
+    .login-card{
+        width:90%;
+        padding:30px;
+    }
+
+    .login-card h2{
+        font-size:1.6rem;
+    }
+
+    .login-card p{
+        font-size:0.8rem;
+    }
+
+    .input-box input{
+        padding:13px 15px 13px 42px;
+        font-size:0.95rem;
+    }
+
+    .input-box i{
+        font-size:1rem;
+        left:13px;
+    }
+
+    .login-card .boton-animado{
+        font-size:0.95rem;
+        padding:13px;
+    }
+}
+
+
+/* Celulares */
+@media (max-width:480px){
+
+    .login-body{
+        padding:20px;
+    }
+
+    .login-card{
+        width:100%;
+        padding:25px 20px;
+        border-radius:15px;
+    }
+
+    .login-card h2{
+        font-size:1.4rem;
+    }
+
+    .login-card p{
+        font-size:0.75rem;
+        margin-bottom:20px;
+    }
+
+    .input-box{
+        margin-bottom:18px;
+    }
+
+    .input-box input{
+        padding:12px 12px 12px 40px;
+        font-size:0.9rem;
+    }
+
+    .input-box i{
+        left:12px;
+        font-size:0.9rem;
+    }
+
+    .login-card .boton-animado{
+        font-size:0.85rem;
+        padding:12px;
+    }
+
+    .login-links{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .login-links a{
+        display:block;
+    }
+}
+
+
+/* Pantallas muy pequeñas */
+@media (max-width:320px){
+
+    .login-card h2{
+        font-size:1.2rem;
+    }
+
+    .input-box input{
+        font-size:0.8rem;
+    }
+
+    .login-links a{
+        font-size:0.75rem;
+    }
 }
