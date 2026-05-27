@@ -40,6 +40,10 @@ font-size: 36px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 12px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio equitativamente */
+    height: 100%; /* Obliga a todas las tarjetas a medir lo mismo */
 }
 
 .card:hover {
