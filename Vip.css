@@ -427,11 +427,15 @@ nav-link {
 
 /* CONTENEDOR CARDS */
 .contenedor-cards{
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:25px;
-    padding:50px;
+    display: grid;
+    grid-template-columns: repeat(4, 260px); /* 4 columnas */
+    justify-content: center; /* centra todo el bloque */
+    gap: 25px;
+
+    width: 100%;
+    padding: 50px 20px;
 }
+
 
 /* CARD BLANCA CON TOQUE ROJO */
 .card{
@@ -716,10 +720,16 @@ footer{
     }
 
 }
+
+
+
+/*cartas*/
+
 .flashcard{
     width: 260px;
     height: 380px;
     perspective: 1000px;
+    
 }
 
 .flashcard-inner{
@@ -822,11 +832,14 @@ footer{
     text-decoration: none;
     font-weight: bold;
 }
+
 .flashcard{
-    width: 260px;
-    height: 380px;
-    perspective: 1000px;
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
 }
+
+
 
 .flashcard-inner{
     width: 100%;
