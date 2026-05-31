@@ -999,3 +999,32 @@ img{
     }
 
 }
+
+
+
+/*color de la vaina vip */
+.btnvip {
+    
+    transition: all 0.3s ease;
+     background: var(--accent);
+    color: #fff !important  ;
+    padding: .45rem .8rem;
+    border-radius: 8px;
+    text-decoration: none
+    
+}   
+
+/* efecto de la vaina vip */
+.btnvip:hover {
+    background-color: #f3ca40; /* Un dorado un poco más vivo al pasar el cursor */
+    color: #fff !important;
+    transform: translateY(-2px); /* Pequeño salto hacia arriba */
+    /* Crea un sombreado sutil alrededor del botón */
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4); 
+}
+
+/* efecto del click de la vaina vip */
+.btnvip:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(212, 175, 55, 0.3);
+}
