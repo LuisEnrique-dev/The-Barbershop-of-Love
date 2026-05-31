@@ -3,6 +3,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Barbershop of Love</title>
     <link rel="stylesheet" href="servicios.css">
 </head>
@@ -17,8 +18,7 @@
             <div class="brand">
 
 
-                   <a href="index.html"> <img src="img/logo.png" alt="Logo" style="height:70px;vertical-align:middle;margin-right:40px;"></a>
-
+<img src="img/logo.png" alt="Logo" class="logo-img">
 
 
                 <h1>
@@ -53,16 +53,6 @@
   </div>
 
 </section>  
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -294,6 +284,13 @@
     <p>&copy; 2026 Barbería Amor al Estilo. Todos los derechos reservados.</p>
   </footer>
 
+<script>
+const btn = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
 
+btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+});
+</script>
 </body>
 </html>
