@@ -172,3 +172,50 @@ window.addEventListener("DOMContentLoaded", () => {
       .setAttribute("min", hoy);
 
 });
+
+
+function generarTicket() {
+    // Obtener los valores de los inputs
+    const nombre = document.getElementById('nombre').value;
+    const barbero = document.getElementById('barbero').value;
+    const servicio = document.getElementById('servicio').value;
+    const fecha = document.getElementById('fecha').value;
+    const hora = document.getElementById('hora').value;
+
+    // Crear un objeto FormData con los datos
+    const formData = new FormData();
+    formData.append('nombre', nombre);
+    formData.append('barbero', barbero);
+    formData.append('servicio', servicio);
+    formData.append('fecha', fecha);
+    formData.append('hora', hora);
+
+    // Enviar los datos a PHP mediante Fetch
+    fetch('guardar_reserva.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            // 1. Asignar las respuestas del servidor al Ticket visual
+            document.getElementById('ticketNum').innerText = data.ticket;
+            document.getElementById('tk-nombre').innerText = data.cliente;
+            document.getElementById('tk-barbero').innerText = data.barbero;
+            document.getElementById('tk-servicio').innerText = data.servicio;
+            document.getElementById('tk-fecha').innerText = data.fecha;
+            document.getElementById('tk-hora').innerText = data.hora;
+            document.getElementById('tk-vence').innerText = data.vencimiento;
+
+            // 2. Ocultar el formulario y mostrar la sección del ticket
+            document.getElementById('ticket-section').style.display = 'block';
+            document.getElementById('reserva').style.display = 'none';
+        } else {
+            alert(data.message); // Muestra el mensaje de error si falta algún dato
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Hubo un problema al procesar la reserva.');
+    });
+}
