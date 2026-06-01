@@ -872,130 +872,73 @@ footer{
 }
 
 
-/* ============ RESPONSIVE PARA RESEÑAS ============ */
 
-/* Evita scroll horizontal */
-body{
-    overflow-x:hidden;
+
+
+/*color de la vaina vip */
+.btnvip {
+    
+    transition: all 0.3s ease;
+     background: var(--accent);
+    color: #fff !important  ;
+    padding: .45rem .8rem;
+    border-radius: 8px;
+    text-decoration: none
+    
+}   
+
+/* efecto de la vaina vip */
+.btnvip:hover {
+    background-color: #f3ca40; /* Un dorado un poco más vivo al pasar el cursor */
+    color: #fff !important;
+    transform: translateY(-2px); /* Pequeño salto hacia arriba */
+    /* Crea un sombreado sutil alrededor del botón */
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4); 
 }
 
-/* Todas las imágenes adaptables */
-img{
-    max-width:100%;
-    height:auto;
+/* efecto del click de la vaina vip */
+.btnvip:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(212, 175, 55, 0.3);
 }
 
-/* Corrige márgenes enormes */
-.opcion-de-ofertas{
-    margin-left:0;
-    grid-template-columns:1fr;
-    gap:20px;
+
+
+
+/* Mostrar solo en móviles */
+@media (max-width: 768px){
+    /* 1. Le decimos al header que permita que los elementos caigan a la siguiente línea */
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    /* 2. Ocultamos el menú por defecto */
+    .nav {
+        display: none;
+        width: 100%;
+        background-color: #ffffff; /* Le damos fondo blanco para que no se mezcle con la silla de barbero */
+        padding: 15px 0; /* Un poco de respiro */
+    }
+
+    /* 3. Cuando el botón se presione y se active el menú */
+    .nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
 }
 
-/* Contenedor */
-.container{
-    width:90%;
-    margin:auto;
-}
+@media (max-width: 768px) {
+    /* ... lo que ya tenías del menú ... */
 
-/* Hero principal */
-.overlay h1{
-    font-size:clamp(30px,6vw,60px);
-}
-
-.overlay p{
-    font-size:clamp(16px,3vw,25px);
-}
-
-/* Tarjetas de reseñas */
-.cards{
-    display:grid !important;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-}
-
-.card{
-    width:100%;
-    min-width:unset;
-}
-
-/* Formulario */
-.contact-grid{
-    width:100%;
-}
-
-/* Tablets */
-@media(max-width:992px){
-
-    .header-inner{
-        flex-wrap:wrap;
+    .contenedor-cards {
+        grid-template-columns: 1fr; /* Una sola columna en celulares */
+        padding: 20px;
     }
-
-    .brand{
-        width:100%;
-        text-align:center;
-    }
-
-}
-
-/* Celulares */
-@media(max-width:768px){
-
-    .nav{
-        display:none;
-    }
-
-    .nav.open{
-        display:flex;
-        flex-direction:column;
-        position:absolute;
-        top:90px;
-        right:10px;
-        width:90%;
-        background:white;
-        padding:20px;
-        border-radius:10px;
-        z-index:1000;
-    }
-
-    .nav-toggle{
-        display:block;
-    }
-
-    .img-principal{
-        height:70vh;
-        background-attachment:scroll;
-    }
-
-    .section-formulario .contact-grid{
-        padding:20px;
-    }
-
-    .rating-group{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .contact-info{
-        flex-direction:column;
-        text-align:center;
-    }
-
-}
-
-/* Pantallas pequeñas */
-@media(max-width:480px){
-
-    .overlay h1{
-        font-size:28px;
-    }
-
-    .overlay p{
-        font-size:15px;
-    }
-
-    button{
-        width:100%;
-    }
-
 }

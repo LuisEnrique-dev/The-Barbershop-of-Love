@@ -284,13 +284,25 @@
     <p>&copy; 2026 Barbería Amor al Estilo. Todos los derechos reservados.</p>
   </footer>
 
-<script>
-const btn = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav');
 
-btn.addEventListener('click', () => {
-    nav.classList.toggle('open');
+
+
+<script>
+const botonMenu = document.querySelector('.nav-toggle');
+const menu = document.querySelector('.nav');
+
+botonMenu.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active');
+    });
 });
 </script>
+
+
+
 </body>
 </html>
