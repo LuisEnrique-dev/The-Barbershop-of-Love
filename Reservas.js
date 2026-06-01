@@ -161,6 +161,8 @@ function nuevoTicket() {
     });
 }
 
+
+
 window.addEventListener("DOMContentLoaded", () => {
 
   const hoy = new Date()
@@ -174,7 +176,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-function generarTicket() {
+function generarTicket() {}
     // Obtener los valores de los inputs
     const nombre = document.getElementById('nombre').value;
     const barbero = document.getElementById('barbero').value;
@@ -190,32 +192,70 @@ function generarTicket() {
     formData.append('fecha', fecha);
     formData.append('hora', hora);
 
-    // Enviar los datos a PHP mediante Fetch
-    fetch('guardar_reserva.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.status === 'success') {
-            // 1. Asignar las respuestas del servidor al Ticket visual
-            document.getElementById('ticketNum').innerText = data.ticket;
-            document.getElementById('tk-nombre').innerText = data.cliente;
-            document.getElementById('tk-barbero').innerText = data.barbero;
-            document.getElementById('tk-servicio').innerText = data.servicio;
-            document.getElementById('tk-fecha').innerText = data.fecha;
-            document.getElementById('tk-hora').innerText = data.hora;
-            document.getElementById('tk-vence').innerText = data.vencimiento;
 
-            // 2. Ocultar el formulario y mostrar la sección del ticket
-            document.getElementById('ticket-section').style.display = 'block';
-            document.getElementById('reserva').style.display = 'none';
-        } else {
-            alert(data.message); // Muestra el mensaje de error si falta algún dato
+
+
+
+
+
+    // Esperamos a que todo el HTML cargue primero
+document.addEventListener("DOMContentLoaded", function() {
+    
+    const botonReservar = document.getElementById("btn-reservar");
+
+    botonReservar.addEventListener("click", function(evento) {
+        evento.preventDefault(); // Evita que la página salte o se recargue
+
+        // 1. Recolectamos los datos de los inputs
+        const datosCita = {
+            barbero: document.getElementById("barbero").value,
+            servicio: document.getElementById("servicio").value,
+            fecha: document.getElementById("fecha").value,
+            hora: document.getElementById("hora").value
+        };
+
+        // 2. Validación básica para que no envíen datos vacíos
+        if(!datosCita.barbero || !datosCita.servicio || !datosCita.fecha || !datosCita.hora) {
+            alert("Por favor, completa todos los campos antes de reservar.");
+            return;
         }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Hubo un problema al procesar la reserva.');
+
+        // 3. Enviamos los datos al PHP usando Fetch
+        fetch("Reservas.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(datosCita)
+        })
+        .then(respuesta => respuesta.json()) // Convertimos la respuesta del PHP a JSON
+        .then(datos => {
+            if(datos.status === "success") {
+                alert("¡Tu turno ha sido reservado con éxito!");
+                // Opcional: Limpiar el formulario después de reservar
+                document.getElementById("servicio").value = "";
+                document.getElementById("fecha").value = "";
+                document.getElementById("hora").value = "";
+            } else {
+                alert("Error al reservar: " + datos.message);
+            }
+        })
+        .catch(error => {
+            console.error("Error en el servidor:", error);
+            alert("Hubo un problema de conexión. Asegúrate de estar usando XAMPP (localhost).");
+        });
     });
-}
+
+});
+
+
+then(datos => {
+    if(datos.status === "success") {
+        alert("¡Tu turno ha sido reservado con éxito!");
+        
+        // Limpiamos los campos para la siguiente reserva
+        document.getElementById("servicio").value = "";
+        document.getElementById("fecha").value = "";
+        document.getElementById("hora").value = "";
+    }
+})
