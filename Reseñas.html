@@ -2,33 +2,22 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Barbershop of Love</title>
   <link rel="stylesheet" href="Reseñas.css">
-  <script src="Reseñas.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
-  <!-- Encabezado -->
-
-
-
   <header class="site-header">
         <div class="container header-inner">
             <div class="brand">
-
-
-                   <a href="index.html"> <img src="img/logo.png" alt="Logo" style="height:70px;vertical-align:middle;margin-right:40px;"></a>
-
-
-
+                <a href="index.html"> <img src="img/logo.png" alt="Logo" style="height:70px;vertical-align:middle;margin-right:40px;"></a>
                 <h1>
                     <i>
                         <a href="index.html">The Barbershop of Love</a>
                     </i>
                 </h1>
-
                 <p class="tag">Barberia — profesional</p>
             </div>
             <nav class="nav">
@@ -36,43 +25,24 @@
                 <a href="servicios.html" class="nav-link">Servicios</a>
                 <a href="Reseñas.html" class="nav-link">Reseñas</a>
                 <a href="Contacto.html" class="nav-link">Contactos</a>
-                <a href="Reservas.html"  class="nav-link">Reservar Ahora</a>
+                <a href="Reservas.html" class="nav-link">Reservar Ahora</a>
                 <a href="Vip.html" class="btnvip nav-link">Vip</a>
-                </a>
             </nav>
             <button class="nav-toggle" aria-label="Abrir menú">☰</button>
         </div>
-    </header>
+  </header>
 
+  <section class="img-principal">
+    <div class="overlay">
+      <h1>Reseñas De Clientes</h1>
+      <p>Aquí verás las opiniones de nuestros clientes después de su corte de pelo</p>
+    </div>
+  </section>  
 
-<section class="img-principal">
-
-  <div class="overlay">
-    <h1>Reseñas De Clientes<h1>
-    <p>Aqui Veras Las Opiniones De Nuestros Clientes Despues De Su Corte De Pelo</p>
-  </div>
-
-</section>  
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Sección de reseñas -->
   <section id="reseñas" class="section light">
     <h2 class="section-title">⭐ Opiniones</h2>
-  <p id="promedio" style="font-weight:bold; color:#5c0000;">Promedio de puntuación: 0.0 ⭐</p>
-  <div class="cards" id="lista-reseñas">
-    <!-- Aquí se insertarán las reseñas dinámicamente -->
-  </div>
+    <p id="promedio" style="font-weight:bold; color:#5c0000;">Promedio de puntuación: 0.0 ⭐</p>
+    
     <div class="cards" id="lista-reseñas">
       <div class="card">
         <h3>Juan & María</h3>
@@ -89,100 +59,79 @@
     </div>
   </section>
 
-  
-
-
-
-
-
-
-
-<!-- Formulario de reseñas -->
-<section id="contacto" class="section-formulario">
-  <div class="formulario-container">
-    <h2 class="section-title">💬 Deja tu reseña</h2>
-    
-    <div class="contact-grid">
-      <form class="contact-form" id="form-reseña" action="conexion2.php" method="POST">
-        
-        <div class="input-group">
-          <label for="nombre">Nombre</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-        </div>
-
-        <div class="input-group">
-          <label for="reseña">Tu reseña</label>
-          <textarea id="reseña" name="reseña" rows="4" placeholder="Cuéntanos tu experiencia..." required></textarea>
-        </div>
-
-        <div class="rating-group">
-          <label class="rating-label"><i class="fa-solid fa-star-half-stroke"></i> Califícanos:</label>
-          <div class="stars">
-              <input type="radio" id="star5" name="calificacion" value="5" required>
-              <label for="star5" class="fa-solid fa-star"></label>
-              
-              <input type="radio" id="star4" name="calificacion" value="4">
-              <label for="star4" class="fa-solid fa-star"></label>
-              
-              <input type="radio" id="star3" name="calificacion" value="3">
-              <label for="star3" class="fa-solid fa-star"></label>
-              
-              <input type="radio" id="star2" name="calificacion" value="2">
-              <label for="star2" class="fa-solid fa-star"></label>
-              
-              <input type="radio" id="star1" name="calificacion" value="1">
-              <label for="star1" class="fa-solid fa-star"></label>
-          </div>
-        </div>
-
-        <div class="form-actions">
-          <button type="submit" class="boton-animado">Enviar Reseña</button>
-        </div>
-      </form>
+  <section id="contacto" class="section-formulario">
+    <div class="formulario-container">
+      <h2 class="section-title">💬 Deja tu reseña</h2>
       
-      <div class="contact-info">
-        <p><i class="fa-solid fa-location-dot"></i> Santo Domingo Este, República Dominicana</p>
-        <p><i class="fa-solid fa-phone"></i> Tel: +1 (809) 426-8612</p>
+      <div class="contact-grid">
+        <form class="contact-form" id="form-reseña">
+          
+          <div class="input-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+          </div>
+
+          <div class="input-group">
+            <label for="reseña">Tu reseña</label>
+            <textarea id="reseña" rows="4" placeholder="Cuéntanos tu experiencia..." required></textarea>
+          </div>
+
+          <div class="rating-group">
+  <label class="rating-label"><i class="fa-solid fa-star-half-stroke"></i> Califícanos:</label>
+  <div class="stars">
+      <input type="radio" id="star5" name="calificacion" value="5">
+      <label for="star5" class="fa-solid fa-star"></label>
+      
+      <input type="radio" id="star4" name="calificacion" value="4">
+      <label for="star4" class="fa-solid fa-star"></label>
+      
+      <input type="radio" id="star3" name="calificacion" value="3">
+      <label for="star3" class="fa-solid fa-star"></label>
+      
+      <input type="radio" id="star2" name="calificacion" value="2">
+      <label for="star2" class="fa-solid fa-star"></label>
+      
+      <input type="radio" id="star1" name="calificacion" value="1">
+      <label for="star1" class="fa-solid fa-star"></label>
+  </div>
+</div>
+
+<div class="form-actions">
+  <button type="button" id="btn-enviar-resena" class="boton-animado">Enviar Reseña</button>
+</div>
+        
+        
+        <div class="contact-info">
+          <p><i class="fa-solid fa-location-dot"></i> Santo Domingo Este, República Dominicana</p>
+          <p><i class="fa-solid fa-phone"></i> Tel: +1 (809) 426-8612</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  
-    </form>
-    
-</section>
-
-
-
-
-<script>
-const botonMenu = document.querySelector('.nav-toggle');
-const menu = document.querySelector('.nav');
-
-botonMenu.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
-
-document.querySelectorAll('.nav a').forEach(link => {
-    link.addEventListener('click', () => {
-        menu.classList.remove('active');
-    });
-});
-</script>
-
-
-
-
-
-
-  <!-- Footer -->
-  <footer class="site-footer">
+<footer class="site-footer">
     <p>&copy; 2026 Barbería Amor al Estilo. Todos los derechos reservados.</p>
   </footer>
 
-  
+  <script>
+    const botonMenu = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav');
 
+    if(botonMenu && menu) {
+        botonMenu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
 
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+            });
+        });
+    }
+  </script>
+
+  <script src="Reseñas.js"></script>
 </body>
 </html>
+
+
