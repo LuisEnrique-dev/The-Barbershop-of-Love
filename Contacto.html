@@ -184,4 +184,20 @@
 
 
 
+<script>
+const botonMenu = document.querySelector('.nav-toggle');
+const menu = document.querySelector('.nav');
+
+botonMenu.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active');
+    });
+});
+</script>
+
+
 </body>

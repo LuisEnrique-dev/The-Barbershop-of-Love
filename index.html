@@ -630,21 +630,21 @@ Jose entiende que un buen corte requiere la máxima definición. Su enfoque est�
                     </div>
                 </footer>
 
-                <script>
-                    document.getElementById('year').textContent = new Date().getFullYear();
-                    // nav toggle simple
-                    const btn = document.querySelector('.nav-toggle');
-                    const nav = document.querySelector('.nav');
-                    btn.addEventListener('click', () => nav.classList.toggle('open'));
-                </script>
+             <script>
+const botonMenu = document.querySelector('.nav-toggle');
+const menu = document.querySelector('.nav');
+
+botonMenu.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active');
+    });
+});
+</script>
 
 
-
-
-
-
-
-
-    
 </body>
 </html>

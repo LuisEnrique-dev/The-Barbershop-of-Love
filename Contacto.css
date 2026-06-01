@@ -706,3 +706,59 @@ img{
     transform: translateY(0);
     box-shadow: 0 2px 6px rgba(212, 175, 55, 0.3);
 }
+
+
+
+/* Mostrar solo en móviles */
+@media (max-width: 768px){
+    /* 1. Le decimos al header que permita que los elementos caigan a la siguiente línea */
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    /* 2. Ocultamos el menú por defecto */
+    .nav {
+        display: none;
+        width: 100%;
+        background-color: #ffffff; /* Le damos fondo blanco para que no se mezcle con la silla de barbero */
+        padding: 15px 0; /* Un poco de respiro */
+    }
+
+    /* 3. Cuando el botón se presione y se active el menú */
+    .nav.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* ... lo que ya tenías del menú ... */
+
+    .contenedor-cards {
+        grid-template-columns: 1fr; /* Una sola columna en celulares */
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Usamos una clase muy específica para que nada la pise */
+    button.nav-toggle, a.nav-toggle, .nav-toggle {
+        display: block !important; /* Fuerza su aparición */
+        width: auto !important;    /* Evita que se estire al 100% por culpa del 'button' genérico */
+        background: #5c0000;       /* Tu color guinda/rojo oscuro del menú */
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 24px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}

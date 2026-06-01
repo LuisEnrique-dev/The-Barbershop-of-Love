@@ -679,6 +679,23 @@ footer{
     cursor: pointer;
 }
 
+
+@media (max-width: 768px) {
+    /* Usamos una clase muy específica para que nada la pise */
+    button.nav-toggle, a.nav-toggle, .nav-toggle {
+        display: block !important; /* Fuerza su aparición */
+        width: auto !important;    /* Evita que se estire al 100% por culpa del 'button' genérico */
+        background: #5c0000;       /* Tu color guinda/rojo oscuro del menú */
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 24px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}
+
+
 /* Mostrar solo en móviles */
 @media (max-width: 768px){
     /* 1. Le decimos al header que permita que los elementos caigan a la siguiente línea */
