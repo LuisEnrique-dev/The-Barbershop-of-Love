@@ -1220,3 +1220,58 @@ body{
     grid-template-columns: repeat(2, 1fr);
     gap:30px;
 }
+
+
+/* ========================================================== */
+/* CONTROL TOTAL DE BARBEROS: 2X2 EN PC Y 1 COLUMNA EN MÓVIL  */
+/* ========================================================== */
+
+/* Computadoras y Pantallas Grandes (2 por fila) */
+.lista-barberos-movil-vertical {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* Dos columnas */
+    gap: 40px !important;
+    width: 100% !important;
+    max-width: 850px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+}
+
+.lista-barberos-movil-vertical .card-barbero {
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 0 auto !important;
+    background: #1a1a1a !important;
+    border-radius: 20px !important;
+}
+
+.lista-barberos-movil-vertical .img-barbero {
+    width: 100% !important;
+    height: 480px !important;
+    overflow: hidden !important;
+}
+
+.lista-barberos-movil-vertical .img-barbero img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+/* CELULARES (Fuerza estrictamente 1 sola columna vertical) */
+@media (max-width: 768px) {
+    .lista-barberos-movil-vertical {
+        grid-template-columns: 1fr !important; /* UNA SOLA COLUMNA */
+        max-width: 100% !important;
+        padding: 10px !important;
+        gap: 30px !important;
+    }
+
+    .lista-barberos-movil-vertical .card-barbero {
+        width: 90% !important; /* Ocupa casi todo el ancho del celular de forma elegante */
+        max-width: 360px !important;
+    }
+
+    .lista-barberos-movil-vertical .img-barbero {
+        height: 250px !important; /* Foto perfecta en tamaño móvil */
+    }
+}

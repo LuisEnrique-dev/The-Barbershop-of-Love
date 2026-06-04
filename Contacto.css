@@ -779,3 +779,7 @@ img{
 .contacto-container p {
 color: white;
 }
+
+.fa-location-dot {
+    font-size: 30px;
+}
