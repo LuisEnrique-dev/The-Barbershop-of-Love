@@ -762,3 +762,20 @@ img{
         cursor: pointer;
     }
 }
+
+
+.footer-social span {
+    color: white;
+}
+
+.fa-instagram {
+    font-size: 30px;
+}
+
+.fa-whatsapp{
+    font-size: 30px;
+}
+
+.contacto-container p {
+color: white;
+}

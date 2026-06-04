@@ -15,6 +15,7 @@ nav {
 }
 
 
+
 .btnvip nav-link{
     background: linear-gradient(135deg, #fceabb 0%, #fccd4d 50%, #f8b532 51%, #fceabb 100%);
     color:#111; /* Texto oscuro para que resalte */
@@ -899,13 +900,8 @@ nav-link {
   font-size: 18px;
 }
 
-/* GRID */
 
-.contenedor-barbero{
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap: 35px;
-}
+
 
 /* CARD */
 
@@ -1152,8 +1148,8 @@ body{
     /* Usamos una clase muy específica para que nada la pise */
     button.nav-toggle, a.nav-toggle, .nav-toggle {
         display: block !important; /* Fuerza su aparición */
-        width: auto !important;    /* Evita que se estire al 100% por culpa del 'button' genérico */
-        background: #5c0000;       /* Tu color guinda/rojo oscuro del menú */
+        width: auto !important;    /* Evita que se estire al 100% por culpa del button */
+        background: #5c0000;       /* rojo oscuro del menú */
         color: white;
         border: none;
         padding: 10px 15px;
@@ -1166,7 +1162,7 @@ body{
 
 /* Mostrar solo en móviles */
 @media (max-width: 768px){
-    /* 1. Le decimos al header que permita que los elementos caigan a la siguiente línea */
+    /* Le decimos al header que permita que los elementos caigan a la siguiente línea */
     .header-inner {
         flex-wrap: wrap;
     }
@@ -1175,15 +1171,15 @@ body{
         display: block;
     }
 
-    /* 2. Ocultamos el menú por defecto */
+    /*Ocultamos el menú  */
     .nav {
         display: none;
         width: 100%;
         background-color: #ffffff; /* Le damos fondo blanco para que no se mezcle con la silla de barbero */
-        padding: 15px 0; /* Un poco de respiro */
+        padding: 15px 0; 
     }
 
-    /* 3. Cuando el botón se presione y se active el menú */
+    /*  Cuando el botón se presione y se active el menú */
     .nav.active {
         display: flex;
         flex-direction: column;
@@ -1200,4 +1196,27 @@ body{
         grid-template-columns: 1fr; /* Una sola columna en celulares */
         padding: 20px;
     }
+}
+
+
+/* Asegura el color  de los títulos en las tarjetas de oferta */
+.card-oferta .info-oferta h3 {
+    color: #ffffff !important; 
+    font-size: 30px;
+    margin-bottom: 12px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Evita que la clase genérica .card rompa el diseño responsivo de las ofertas */
+.contenedor-ofertas .card-oferta {
+    width: 100% !important;
+    max-width: none !important;
+    background: #1a1a1a !important;
+}
+
+
+.contenedor-barbero{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:30px;
 }
